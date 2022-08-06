@@ -1,0 +1,3 @@
+hikari=2.0.0.dev109
+pymongo=3.12.3
+python-dotenv=0.20.0
