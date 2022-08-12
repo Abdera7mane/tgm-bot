@@ -1,4 +1,3 @@
-from tokenize import Token
 import hikari
 import os
 from dotenv import load_dotenv
