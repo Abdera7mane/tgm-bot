@@ -1,6 +1,6 @@
 ################################Remarques##############################
 
-#Assurez-vous d'activer l'environnement virtuel/evn 
+#Assurez-vous d'activer l'environnement virtuel
 #Chaque fois que vous apportez des modifications, fermez le bot dans le terminal, puis redémarrez-le.  Il contiendra alors vos modifications. 
 
 ########################################################################
@@ -13,7 +13,7 @@ import lightbulb
 
 #var lib
 #Les variables d'environnement sont plus sécurisées et doivent être utilisées lors du téléchargement de votre projet vers un système de contrôle de version tel que git. 
-#définissez les variables d'environnement dans un nouveau .env. Le .env peut également être ajouté à votre .gitginore (si vous utilisez git), afin que vos informations d'identification ne soient pas exposées publiquement sur une plate-forme comme GitHub
+#définissez les variables d'environnement dans un nouveau .env.. Le .env peut également être ajouté à votre .gitginore (si vous utilisez git), afin que vos informations d'identification ne soient pas exposées publiquement sur une plate-forme comme GitHub
 from dotenv import load_dotenv
 import os
 
@@ -69,8 +69,8 @@ ref = db.reference('subjects')
 #nous pouvons utiliser des commandes slash aussi (taper \[nom de la commande])
 @lightbulb.implements(lightbulb.PrefixCommand)
 async def suggestion(ctx: lightbulb.Context):
-    #envoyer les donnée a la base de donnée
     users_ref = ref.child( ctx.user.username)
+    #envoyez les donnée a la base de donnée
     users_ref.push({
             'resources' : ctx.options.resources,
             'title' : ctx.options.suggestion,
